@@ -57,7 +57,7 @@ export default function Form({ actionForm, token }: IForm) {
               type: "danger",
             });
           } else {
-            setMessageData({ message: teste, time: 5, type: "danger" });
+            setMessageData({ message: JSON.stringify(teste), time: 5, type: "danger" });
           }
         } else {
           setMessageData({

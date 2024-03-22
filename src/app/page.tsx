@@ -33,8 +33,10 @@ export default async function App({ searchParams }: any) {
       console.log("erro", err);
 
       return String(
-        err?.response?.data?.message ||
-          "Erro ao trocar a senha, tente novamente"
+        JSON.stringify(
+          err?.response?.data?.message ||
+            "Erro ao trocar a senha, tente novamente"
+        )
       );
     }
   }
