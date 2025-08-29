@@ -39,10 +39,16 @@ export const Input = styled(TextField)`
   border-radius: 10px;
   margin-top: -30px;
   &::placeholder {
-    color: ${Colors.white};
+    color: white !important
   }
   & > .MuiInputBase-root > fieldset {
     border: none;
+  }
+  & .MuiInputBase-input {
+    &::placeholder {
+      color: white !important;
+      opacity: 1 !important;
+    }
   }
 `;
 
@@ -88,7 +94,7 @@ export const Label = styled.div`
   font-size: 1.1em;
   letter-spacing: 1.5px;
   margin-bottom: 15px;
-  margin-top: 20%;
+  margin-top: 10%;
   @media (max-width: ${Medias.xl}px) {
     margin-top: 10%;
   }
@@ -109,7 +115,7 @@ export const ContainButton = styled.div<IButtonForm>`
   background-color: ${(props) =>
     props.disabled ? Colors.disable : Colors.bgButton};
   margin-top: 30px;
-
+  margin-right: 10px;
   &:active {
     opacity: 0.5;
   }
